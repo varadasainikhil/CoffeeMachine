@@ -63,9 +63,8 @@ def calculate_change(type_of_coffee):
     cost = MENU[type_of_coffee]['cost']
     change = round(total_given - cost, 2)
     if change > 0:
-        print(f"Amount for {type_of_coffee} is {cost}")
-        print(f"Amount given is {total_given}")
-        print(f"The change is {change}")
+        print(f"Cost of {type_of_coffee} is {cost}")
+        print(f"Your change is {change}")
         return True
     else:
         print("Sorry that's not enough money. Money is refunded.")
@@ -86,6 +85,7 @@ def make_coffee(type_of_coffee):
         rem_milk = resources["milk"]
         rem_milk -= req_milk
         resources["milk"] = rem_milk
+    print(f"Here is your {type_of_coffee}, enjoy it.")
 
 
 def charge_for_coffee(type_of_coffee):
